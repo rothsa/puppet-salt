@@ -22,6 +22,13 @@ master: <%= @minion_master %>
 # If only one master is listed, this setting is ignored and a warning will be logged.
 random_master: <%= @minion_random_master %>
 
+# If master is a list of addresses and :conf_minion`master_type` is failover, shuffle them before 
+# trying to connect to distribute the minions over all available masters. This uses Python's
+# random.shuffle method.
+# The difference between this option and random_master is that it is meant for when :conf_minion`master_type`
+# is failover, and it uses the random.shuffle instead of the random.randint Python method.
+master_shuffle: <%= @minion_master_shuffle %>
+
 # Set whether the minion should connect to the master via IPv6:
 ipv6: <%= @minion_ipv6 %>
 

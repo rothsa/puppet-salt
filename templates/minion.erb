@@ -123,6 +123,9 @@ strip_colors: <%= @minion_strip_colors %>
 #
 #backup_mode: minion
 
+# Enables verification of the master-public-signature returned by the master in auth-replies.
+verify_master_pubkey_sign: <%= @minion_verify_master_pubkey_sign %>
+
 # When waiting for a master to accept the minion's public key, salt will
 # continuously attempt to reconnect until successful. This is the time, in
 # seconds, between those reconnection attempts.

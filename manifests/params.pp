@@ -165,6 +165,7 @@ class salt::params {
   ###############################################
   $minion_master = 'salt'
   $minion_random_master = false
+  $minion_master_shuffle = false 
   $minion_ipv6 = false
   $minion_retry_dns = 30
   $minion_master_port = $master_ret_port
@@ -181,6 +182,7 @@ class salt::params {
   $minion_output = 'nested'
   $minion_color = true
   $minion_strip_colors  = true
+  $minion_verify_master_pubkey_sign = false
   $minion_acceptance_wait_time = 10
   $minion_acceptance_wait_time_max = 0
   $minion_rejected_retry = false

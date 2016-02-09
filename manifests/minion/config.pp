@@ -85,7 +85,7 @@ inherits salt::minion {
     ensure  => file,
     owner   => 0,
     group   => 0,
-    mode    => '0664',
+    mode    => '0640',
     content => template($minion_template),
     replace => $minion_config_manage,
   }
